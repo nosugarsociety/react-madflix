@@ -1,7 +1,8 @@
 import React from "react";
+import { MainContainer } from '../styles';
 
 const TV = () => {
-  return <div>TV</div>;
+  return <MainContainer>TV</MainContainer>;
 }
 
 export default TV;

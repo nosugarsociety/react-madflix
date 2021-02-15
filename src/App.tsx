@@ -5,8 +5,7 @@ import { GlobalStyle, theme } from './styles/index';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      app
+    <ThemeProvider theme={theme}>      
       <GlobalStyle />
       <AppRouter />    
     </ThemeProvider>
