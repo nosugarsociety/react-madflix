@@ -12,6 +12,11 @@ export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const theme: DefaultTheme = {
@@ -20,7 +25,7 @@ export const theme: DefaultTheme = {
     side: "20px"
   },
   colors: {
-    main: "#41444b",
+    main: "#fff",
     secondary: "#52575d",
     highlight: "#fddb3a"
   }
@@ -29,7 +34,9 @@ export const theme: DefaultTheme = {
 export const MainContainer = styled.div`
   height: 100%;
   min-height: 100vh;
-  padding: 0 ${(props) => props.theme.paddings.side};
+  width: 100%;
+  max-width: 1480px;
+  padding-left: 20px;
   padding-top: ${(props) => props.theme.paddings.containerTop};
   background-color: ${(props) => props.theme.colors.main};
 `; 

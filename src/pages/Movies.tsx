@@ -13,11 +13,8 @@ const Movies = () => {
     loading,
 
   } = useMovieListAll();
-  console.log(useMovieListAll())
-  console.log(nowPlaying);
 
   return (
- 
     <MainContainer>
       Movies    
       {loading ? (

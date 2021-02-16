@@ -15,10 +15,12 @@ export type TvCategory =
 
 export type CategoryItem = {
   id: number;
-  poster_path: string | null;
+  genre_ids: Array<number>;
+  poster_path: string;
   adult: string | null;
   release_date: string;
   title: string;
+  overview: string;
   vote_average: number;
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { CategoryList } from '../../common/api';
-import { Container, Title } from './style';
+import { CategoryItem } from '../../components/CategoryItem';
+import { CategoryItemContainer, Container, Title } from './style';
 
 type CategoryProps = {
   title: string;
@@ -11,10 +12,21 @@ export const Category = ({title, lists}: CategoryProps) => {
   return (
     <Container>
       <Title>{title}</Title>
-      {lists.results.slice(0, 6).map((item) => (
-        <span key={item.id}>{item.title}</span>
-      ))}
+      <CategoryItemContainer>
+        {lists.results.slice(0, 6).map((item) => {
+          console.log(item);
+          return (
+            <CategoryItem 
+              key={item.id}
+              posterUrl={
+                item.poster_path
+              }
+              title={item.title}
+              desc={item.overview}
+            />
+          );      
+        })}
+      </CategoryItemContainer>
     </Container>
   );
 }
-
