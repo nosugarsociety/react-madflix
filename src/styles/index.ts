@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, DefaultTheme } from "styled-components";
+import styled, { createGlobalStyle, DefaultTheme } from "styled-components/macro";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -28,7 +28,8 @@ export const theme: DefaultTheme = {
 
 export const MainContainer = styled.div`
   height: 100%;
-  padding: 0 ${props => props.theme.paddings.side};
-  padding-top: ${props => props.theme.paddings.containerTop};
-  background-color: ${props => props.theme.colors.main};
+  min-height: 100vh;
+  padding: 0 ${(props) => props.theme.paddings.side};
+  padding-top: ${(props) => props.theme.paddings.containerTop};
+  background-color: ${(props) => props.theme.colors.main};
 `; 
