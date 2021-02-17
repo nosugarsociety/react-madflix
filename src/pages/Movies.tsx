@@ -11,9 +11,8 @@ const Movies = () => {
     popular,
     topRated,
     loading,
-
   } = useMovieListAll();
-
+  
   return (
     <MainContainer>
       Movies    

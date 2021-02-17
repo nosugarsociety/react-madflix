@@ -39,6 +39,30 @@ const api = axios.create({
   },
 });
 
+export const useMovieDetail = (id: number) => {
+  const [detail, setDetail] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {         
+        const { data: detailData } = await api.get(`movie/${id}`);
+        setDetail(detailData);
+        
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+
+  }, [id]);
+
+  return { detail, error, loading };
+}
+
 export const useMovieList = (category: string) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -49,6 +73,7 @@ export const useMovieList = (category: string) => {
       try {         
         const res = await api.get(`movie/${category}`);
         const result = res.data;
+        setData(result);
       } catch (error) {
         setError(error);
       } finally {

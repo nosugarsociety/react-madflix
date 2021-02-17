@@ -14,7 +14,6 @@ export const Category = ({title, lists}: CategoryProps) => {
       <Title>{title}</Title>
       <CategoryItemContainer>
         {lists.results.slice(0, 6).map((item) => {
-          console.log(item);
           return (
             <CategoryItem 
               key={item.id}
@@ -23,6 +22,7 @@ export const Category = ({title, lists}: CategoryProps) => {
               }
               title={item.title}
               desc={item.overview}
+              genreIds={item.genre_ids}
             />
           );      
         })}

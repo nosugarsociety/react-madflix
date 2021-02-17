@@ -20,6 +20,6 @@ export const Grid = styled.div`
 
 export const CategoryItemContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 440px));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
 `

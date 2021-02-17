@@ -3,7 +3,7 @@ import styled, { createGlobalStyle, DefaultTheme } from "styled-components/macro
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 16px;
+    font-size: 10px;
   }
   #root {
     height: 100vh;
@@ -37,6 +37,7 @@ export const MainContainer = styled.div`
   width: 100%;
   max-width: 1480px;
   padding-left: 20px;
+  padding-right: 60px;
   padding-top: ${(props) => props.theme.paddings.containerTop};
   background-color: ${(props) => props.theme.colors.main};
 `; 
